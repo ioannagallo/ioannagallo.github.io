@@ -296,7 +296,7 @@ https://templatemo.com/tm-593-personal-shape
             right: -100%;
             width: 100%;
             height: 100vh;
-            background: rgba(0, 0, 0, 0.98);
+            background: rgba(45, 45, 45, 0.98);
             backdrop-filter: blur(20px);
             display: flex;
             flex-direction: column;
@@ -901,6 +901,54 @@ https://templatemo.com/tm-593-personal-shape
         .tech-tag:hover {
             background: var(--primary-color);
             color: var(--text-light);
+        }
+
+        /* Tarjeta de imagen genérica: Para añadir imágenes sueltas en formato tarjeta
+           sin tener que tocar el CSS por cada una. Usa una etiqueta <img> normal. Ver en el manual */
+        .image-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .image-card {
+            background: var(--bg-card);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .image-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .image-card img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .image-card-content {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        .image-card-content h4 {
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .image-card-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
         /* Participations, Awards & Clients Sections */
