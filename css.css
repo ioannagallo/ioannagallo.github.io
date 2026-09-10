@@ -1956,3 +1956,59 @@ https://templatemo.com/tm-593-personal-shape
                 height: 55vh;
             }
         }
+        /* Repensar la IA Galería */
+        .gallery-carousel {
+            position: relative;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .carousel-track-wrapper {
+            overflow: hidden;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 1rem;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            flex: 0 0 calc((100% - 2rem) / 3); /* 3 imágenes visibles, con 2 gaps de 1rem */
+            margin: 0;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .carousel-slide figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.55);
+            color: #fff;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .carousel-slide { flex: 0 0 calc((100% - 1rem) / 2); } /* 2 en tablet */
+        }
+
+        @media (max-width: 600px) {
+            .carousel-slide { flex: 0 0 100%; } /* 1 en celular */
+            .carousel-slide img { height: 220px; }
+        }
+
