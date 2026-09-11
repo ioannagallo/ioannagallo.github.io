@@ -1697,7 +1697,7 @@ https://templatemo.com/tm-593-personal-shape
 
         .docs-section {
             scroll-margin-top: 100px;
-            padding-top: 0rem
+            padding-top:none
             padding-bottom: 0rem;
             margin-bottom: 0rem;
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
